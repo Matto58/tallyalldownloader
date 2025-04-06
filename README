@@ -1,22 +1,24 @@
-what is this??
-    it's a bash script for downloading tallyall.club or the cojumpendium
-    archive.
-how does this work and how do i use it??
-    it downloads the main page for the release and artist and then searches
-    the keyword specified in the page, then rips the download url from that.
+Q: what is this??
+A: it's a bash script for downloading files from tallyall.club or the
+   cojumpendium archive.
 
-    tallyall [artist] [release] [keyword]
-    artist:  cd - cojum dip (uses cojumpendium archive)
-             th - tally hall (uses tallyall.club)
-             mm - miracle musical (uses tallyall.club)
-    release: check with tallyall [artist] [insert keyboard spam here]
-    keyword: a word in the song title
+Q: how does this work and how do i use it??
+A: it downloads the main page for the release and artist and then searches
+   the keyword specified in the page, then rips the download url from that.
 
-    for example, to download the sacred beast demo from admittedly incomplete
-    demos, you'd run tallyall th aid sacred. this looks up the keyword "sacred"
-    in the admittedly incomplete demos page and finds the 2nd mention of it
-    (usually the displayed file name with directory lister) and uses that to
-    download the final file.
+   tallyall [artist] [release] [keyword]
+   artist:  cd - cojum dip (uses cojumpendium archive)
+            th - tally hall (uses tallyall.club)
+            mm - miracle musical (uses tallyall.club)
 
-this is some disgusting code. SURELY you can clean it up
-    i can. and i will eventually. if i don't, it's your job to clean it up.
+   release: check with tallyall [artist] [insert keyboard spam here]
+   keyword: a word in the song title
+   for example, to download the sacred beast demo from admittedly incomplete
+   demos, you'd run tallyall th aid sacred. this looks up the keyword "sacred"
+   in the admittedly incomplete demos page and finds the 2nd mention of it
+   (usually the displayed file name with directory lister) and uses that to
+   download the final file.
+
+Q: this is some disgusting code. SURELY you can clean it up
+A: first of all, not a question; second of all, i know. and i will eventually.
+   if i don't, it's your job to clean it up. because fuck you.
