@@ -10,9 +10,9 @@ A: it downloads the main page for the release and artist and then searches
    artist:  cd - cojum dip (uses cojumpendium archive)
             th - tally hall (uses tallyall.club)
             mm - miracle musical (uses tallyall.club)
-
    release: check with tallyall [artist] [insert keyboard spam here]
    keyword: a word in the song title
+
    for example, to download the sacred beast demo from admittedly incomplete
    demos, you'd run tallyall th aid sacred. this looks up the keyword "sacred"
    in the admittedly incomplete demos page and finds the 2nd mention of it
