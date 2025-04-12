@@ -12,7 +12,7 @@ fetchBase() {
     #echo "Base URL: $lookupUrl"
 
     curl -o /tmp/tallyallbase.txt -s "$lookupUrl"
-    foundName="$(grep -i $str /tmp/tallyallbase.txt | sed -n "2p" | xargs)"
+    foundName="$(grep -i "$str" /tmp/tallyallbase.txt | sed -n "2p" | xargs)"
     if [ -z "$foundName" ]; then
         echo "Keyword '$str' not found in $3"
         exit
@@ -52,7 +52,7 @@ elif [ "$1" == "cd" ]; then
         ["cdbc"]="[2014] Cojum Dip [Bandcamp FLAC]"
         ["cdweb"]="[2019] Cojum Dip [WEB FLAC]"
     )
-    if [ -z $2 ]; then
+    if [ -z "$2" ]; then
         echo "No Cojum Dip release provided"
         exit
     fi
@@ -62,7 +62,7 @@ elif [ "$1" == "cd" ]; then
         for id in "${!releases[@]}"; do echo -e "\t$id:\t${releases[$id]}"; done
         exit
     fi
-    fetchBase "$coreUrl" "$lookupUrl" "${releases[${release}]}" $3
+    fetchBase "$coreUrl" "$lookupUrl" "${releases[${release}]}" "$3"
 
 # tally hall
 elif [ "$1" == "th" ]; then
@@ -82,7 +82,7 @@ elif [ "$1" == "th" ]; then
         ["pingry"]="The Pingry EP"
         ["wtth"]="Welcome to Tally Hall EP"
     )
-    if [ -z $2 ]; then
+    if [ -z "$2" ]; then
         echo "No Tally Hall release provided"
         exit
     fi
@@ -92,7 +92,7 @@ elif [ "$1" == "th" ]; then
         for id in "${!releases[@]}"; do echo -e "\t$id:\t${releases[$id]}"; done
         exit
     fi
-    fetchBase "$coreUrl" "$lookupUrl" "${releases[${release}]}" $3
+    fetchBase "$coreUrl" "$lookupUrl" "${releases[${release}]}" "$3"
 
 # miracle musical
 elif [ "$1" == "mm" ]; then
@@ -103,7 +103,7 @@ elif [ "$1" == "mm" ]; then
         ["hpii2"]="Hawaii Part II Part ii"
         ["partii"]="Hawaii Partii"
     )
-    if [ -z $2 ]; then
+    if [ -z "$2" ]; then
         echo "No Miracle Musical release provided"
         exit
     fi
@@ -113,7 +113,7 @@ elif [ "$1" == "mm" ]; then
         for id in "${!releases[@]}"; do echo -e "\t$id:\t${releases[$id]}"; done
         exit
     fi
-    fetchBase "$coreUrl" "$lookupUrl" "${releases[${release}]}" $3
+    fetchBase "$coreUrl" "$lookupUrl" "${releases[${release}]}" "$3"
 
 else
     echo "Invalid artist provided, valid are: th - Tally Hall, cd - Cojum Dip, mm - Miracle Musical"
